@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First-Principles Engineering Lab — Mohammed KM</title>
+    <meta
+      name="description"
+      content="Interactive visual simulations of the Idiot Index, the 5-Step Manufacturing Algorithm, and Tsiolkovsky rocket reusability. Built by Mohammed KM."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="First-Principles Engineering Lab — Mohammed KM" />
+    <meta
+      property="og:description"
+      content="Three playable engineering simulations: the Idiot Index BOM calculator, the 5-Step Factory Bottleneck Simulator, and Physics-Up Rocket Reusability."
+    />
+    <meta property="og:image" content="./og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="First-Principles Engineering Lab — Mohammed KM" />
+    <meta
+      name="twitter:description"
+      content="Interactive simulations of the Idiot Index, 5-Step Factory Algorithm, and Physics-Up Rocket Reusability."
+    />
+    <meta name="twitter:image" content="./og-card.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-Bz3U6Pux.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DyTWTLmr.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="header-top">
+          <p class="eyebrow">INTERACTIVE ENGINEERING NOTEBOOK</p>
+          <p class="byline">By <a href="https://mohammed-km.in" target="_blank" rel="noopener noreferrer">Mohammed KM</a></p>
+        </div>
+        <h1>First-Principles Engineering Lab</h1>
+        <p class="subtitle">
+          Reason from raw physics instead of precedent. Three live simulations inspired by Walter Isaacson's <em>Elon Musk</em>.
+        </p>
+
+        <nav class="tab-bar" role="tablist" aria-label="Engineering simulations">
+          <button
+            class="tab-btn is-active"
+            role="tab"
+            id="tab-idiot"
+            aria-selected="true"
+            aria-controls="panel-idiot"
+            data-tab="idiot"
+          >
+            <span class="tab-index">01</span>
+            <span class="tab-label">Idiot Index</span>
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            id="tab-factory"
+            aria-selected="false"
+            aria-controls="panel-factory"
+            data-tab="factory"
+          >
+            <span class="tab-index">02</span>
+            <span class="tab-label">5-Step Factory</span>
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            id="tab-rocket"
+            aria-selected="false"
+            aria-controls="panel-rocket"
+            data-tab="rocket"
+          >
+            <span class="tab-index">03</span>
+            <span class="tab-label">Physics-Up Orbit</span>
+          </button>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section
+          id="panel-idiot"
+          class="tab-panel is-active"
+          role="tabpanel"
+          aria-labelledby="tab-idiot"
+        ></section>
+        <section
+          id="panel-factory"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-factory"
+          hidden
+        ></section>
+        <section
+          id="panel-rocket"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-rocket"
+          hidden
+        ></section>
+      </main>
+
+      <footer class="site-footer">
+        <p>First-Principles Engineering Lab — 100% client-side physics and cost models. Zero external APIs.</p>
+      </footer>
+    </div>
+
+  </body>
+</html>

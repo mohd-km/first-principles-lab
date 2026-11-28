@@ -352,7 +352,7 @@ export const GridDispatchLab: React.FC<Props> = ({ inputs, onChange, summary }) 
 
           <div className="control-group">
             <div className="control-head">
-              <label className="control-label" htmlFor="gas-slider">Gas plants (CCGT and peakers, switch on when needed)</label>
+              <label className="control-label" htmlFor="gas-slider">Gas plants (CCGT, combined-cycle gas turbine, and peakers, switch on when needed)</label>
               <span className="control-val">{inputs.gasGW.toFixed(isSmallScale ? 1 : 0)} GW</span>
             </div>
             <div className="slider-wrap">
@@ -370,7 +370,7 @@ export const GridDispatchLab: React.FC<Props> = ({ inputs, onChange, summary }) 
 
           <div className="control-group">
             <div className="control-head">
-              <label className="control-label" htmlFor="lfp-slider">Battery storage (LFP, 4h, 86.5% RTE)</label>
+              <label className="control-label" htmlFor="lfp-slider">Battery storage (LFP, lithium iron phosphate, 4h, 86.5% RTE)</label>
               <span className="control-val">
                 {inputs.lfpGWh.toFixed(isSmallScale ? 1 : 0)} GWh ({(inputs.lfpGWh / 4).toFixed(1)} GW)
               </span>
@@ -583,7 +583,7 @@ export const GridDispatchLab: React.FC<Props> = ({ inputs, onChange, summary }) 
                 How full the stores are (state of charge, SoC), typical repeating day
               </span>
               <span className="mono" style={{ fontSize: 12, color: 'var(--ink-muted)' }}>
-                LFP {inspected.lfpSocPct.toFixed(0)}% | PHS {inspected.phsSocPct.toFixed(0)}% at {inspected.label}
+                Battery {inspected.lfpSocPct.toFixed(0)}% full | Pumped hydro {inspected.phsSocPct.toFixed(0)}% full at {inspected.label}
               </span>
             </div>
             <svg viewBox={`0 0 ${W} ${socH}`} className="chart-svg" aria-label="Storage State of Charge curve">
@@ -669,23 +669,26 @@ export const GridDispatchLab: React.FC<Props> = ({ inputs, onChange, summary }) 
           <div>
             <h4>Why round-the-clock power costs more than the plant price (firm vs headline LCOE)</h4>
             <p>
-              Headline solar ($36/MWh) and wind ($42/MWh) LCOE assume every generated MWh is consumed.
-              When midday solar overshoots demand, curtailed MWh still carry full capital cost, and
-              evening gaps require LFP storage ($110–$150/MWh LCOS, 85–88% RTE), Pumped Hydro
-              ($80–$140/MWh, 75–82% RTE), or dispatchable CCGT gas (58–64% thermal efficiency).
+              The headline cost per unit (LCOE, levelised cost of energy) of solar ($36/MWh) and wind
+              ($42/MWh) assumes every unit generated gets used. When midday solar overshoots demand, the
+              wasted (curtailed) units still had to be paid for, and evening gaps need lithium iron
+              phosphate (LFP) batteries ($110–$150/MWh storage cost, LCOS, getting 85–88% back out, RTE,
+              round-trip efficiency), pumped hydro ($80–$140/MWh, 75–82% back), or gas plants that can
+              switch on at will (CCGT, combined-cycle gas turbine, 58–64% of the fuel's heat turned into power).
             </p>
             <div className="eq-block">
-              Firm LCOE = (Total Gen CAPEX/Fuel + Storage LCOS) / Actually Delivered MWh
+              Firm LCOE = (plant build cost (CAPEX) and fuel + storage cost (LCOS)) / units actually delivered (MWh)
             </div>
             <p>
               Benchmark: 1 GW of continuous 24/7 power from Solar + Megapacks in the US Southwest requires
-              ~4.5–5.0 GWp PV (~90–100 km²) plus ~16 GWh LFP (~4,100 Megapack 2 XL units).
+              ~4.5–5.0 GW of peak solar panel (PV, photovoltaic) capacity (~90–100 km²) plus ~16 GWh of
+              lithium iron phosphate batteries (~4,100 Tesla Megapack 2 XL units).
             </p>
           </div>
           <div>
-            <h4>Spinning inertia, how fast frequency falls (RoCoF) and why hydrogen storage loses so much</h4>
+            <h4>Spinning inertia, how fast frequency falls (RoCoF, rate of change of frequency) and why hydrogen storage loses so much</h4>
             <p>
-              On a 50 Hz AC grid (normal band 49.90–50.05 Hz; UFLS trips 49.4–48.8 Hz), spinning
+              On a 50 Hz AC (alternating current) grid (normal band 49.90–50.05 Hz; UFLS trips 49.4–48.8 Hz), spinning
               thermal/nuclear/hydro turbines provide mechanical inertia (H = 3–5 s), while inverter-based
               solar and wind provide H = 0 s without grid-forming controls. UFLS (under-frequency load shedding) is the automatic cut of some customers to save the rest:
             </p>
@@ -693,9 +696,10 @@ export const GridDispatchLab: React.FC<Props> = ({ inputs, onChange, summary }) 
               RoCoF = df/dt = [f0 * (P_gen - P_load)] / (2 * H_sys * S_n)
             </div>
             <p>
-              Why LFP and Pumped Hydro beat Green Hydrogen for daily grid shifting: Electrolysis
-              (55 kWh/kg, 60.6% LHV) + compression + CCGT/Fuel Cell (50–62%) yields only <strong>28%–35%</strong>{' '}
-              round-trip power-to-power efficiency versus <strong>85%–88%</strong> for LFP BESS.
+              Why batteries and pumped hydro beat green hydrogen for shifting power within a day: splitting
+              water into hydrogen (55 kWh per kg, 60.6% efficient) + compressing it + burning it in a gas
+              turbine or fuel cell (50–62%) gets back only <strong>28%–35%</strong>{' '}
+              of the electricity put in, versus <strong>85%–88%</strong> for a lithium iron phosphate battery system.
             </p>
           </div>
         </div>

@@ -224,7 +224,7 @@ export const LinkBudgetLab: React.FC<LinkBudgetLabProps> = ({
               <span>34 dBi (phased array)</span>
               <span>55 dBi (gateway)</span>
             </div>
-            <p className="plain-hint">dB is a log scale: every +3 dB roughly doubles the power, +10 dB is 10 times.</p>
+            <p className="plain-hint">dB (decibels) is a log scale: every +3 dB roughly doubles the power, +10 dB is 10 times. dBi compares the antenna with one that spreads signal equally in all directions.</p>
           </div>
 
           <div className="control-group">
@@ -248,7 +248,7 @@ export const LinkBudgetLab: React.FC<LinkBudgetLabProps> = ({
               <span>50 dBW (LEO spot)</span>
               <span>65 dBW (big broadband satellite)</span>
             </div>
-            <p className="plain-hint">EIRP is the power the satellite beams toward you, counting its own antenna focus. dBW means decibels compared with 1 watt.</p>
+            <p className="plain-hint">EIRP (effective isotropic radiated power) is the power the satellite beams toward you, counting its own antenna focus. dBW means decibels compared with 1 watt.</p>
           </div>
 
           {!coupleToOrbit && (

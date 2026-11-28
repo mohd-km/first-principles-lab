@@ -27,7 +27,7 @@ const config: ShellConfig = {
     },
     {
       id: 'orbits', story: orbitsStory, label: 'Orbits & links', sub: 'how high · how fast · how far', scope: 'orbits',
-      provenance: [{ kind: 'model', label: 'orbit physics (Kepler, vis-viva)' }, { kind: 'model', label: 'radio signal maths (Friis path loss, Shannon speed limit)' }],
+      provenance: [{ kind: 'model', label: 'orbit physics (Kepler, vis-viva)' }, { kind: 'model', label: 'radio signal maths (signal lost over distance, Shannon speed limit)' }],
       load: () => import('./modules/orbits/App'),
     },
   ],

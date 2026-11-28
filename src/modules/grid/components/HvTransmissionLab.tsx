@@ -149,7 +149,7 @@ export const HvTransmissionLab: React.FC<Props> = ({
     <section className="lab-section" id="hv-transmission">
       <div className="section-header">
         <div>
-          <h2>Sending power far away: AC vs DC power lines (HVAC vs HVDC)</h2>
+          <h2>Sending power far away: AC vs DC power lines (HVAC vs HVDC, high-voltage alternating vs direct current)</h2>
           <p className="section-desc">
             Wires heat up and waste power as they carry it. Compare normal high-voltage AC lines (110 kV to 765 kV)
             with high-voltage DC lines (±500 / ±800 kV) over different distances, on land or under the sea.
@@ -632,13 +632,13 @@ export const HvTransmissionLab: React.FC<Props> = ({
               P_loss = 3 * I² * R = (P² * R) / (V² * cos²θ)   =&gt;   P_loss ∝ 1 / V²
             </div>
             <p>
-              Stepping up 10× (e.g., 40 kV to 400 kV) reduces current 10× and ohmic heat loss by{' '}
-              <strong>100× (99%)</strong>. At 1 GW (pf 1.0), generator busbars at 24 kV carry ~24,100 A,
+              Stepping up 10× (e.g., 40 kV to 400 kV) reduces current 10× and heat loss in the wire by{' '}
+              <strong>100× (99%)</strong>. At 1 GW (power factor 1.0), generator output at 24 kV carry ~24,100 A,
               while a 765 kV line carries just ~755 A.
             </p>
           </div>
           <div>
-            <h4>Why HVDC Wins Beyond 600–800 km Overhead or 50 km Subsea</h4>
+            <h4>Why high-voltage direct current (HVDC) wins beyond 600–800 km overhead or 50 km under the sea</h4>
             <p>
               AC lines suffer from skin effect (increasing R_AC by 5–15% over R_DC) and continuous
               ground capacitance (the cable acts like a giant capacitor that must be refilled 50 times a second). In
@@ -649,8 +649,8 @@ export const HvTransmissionLab: React.FC<Props> = ({
               I_c = 2 * π * f * C * V_ph * L   (HVDC: f = 0 Hz =&gt; I_c = 0 A)
             </div>
             <p>
-              HVDC LCC (classic thyristor converters, ±500 to ±800 kV) delivers 3,000–6,000 MW at 2.5%–3.5% loss per 1,000 km;
-              HVDC VSC (newer transistor converters, ±320 to ±525 kV) enables subsea plastic-insulated (XLPE) links at 3.0%–3.5% per 1,000 km.
+              HVDC with classic converters (LCC, line-commutated converter, ±500 to ±800 kV) delivers 3,000–6,000 MW at 2.5%–3.5% loss per 1,000 km;
+              HVDC with newer transistor converters (VSC, voltage-source converter, ±320 to ±525 kV) enables subsea plastic-insulated (XLPE) links at 3.0%–3.5% per 1,000 km.
             </p>
           </div>
         </div>

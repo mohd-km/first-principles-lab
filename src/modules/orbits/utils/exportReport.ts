@@ -107,7 +107,7 @@ export function exportJsonReport(
   weather: WeatherCondition
 ): void {
   const payload = {
-    lab: 'Applied Physics & Deep-Tech Labs · orbits (labs.mohammed-km.in)',
+    lab: 'Engineering, Energy & Space Lab · orbits (engineering.mohammed-km.in)',
     author: 'Mohammed KM',
     exportedAt: new Date().toISOString(),
     weather,
@@ -129,7 +129,7 @@ export function exportMarkdownReport(
   const md = [
     '# Orbits & Link Budget — Snapshot',
     '',
-    'Generated client-side by Applied Physics & Deep-Tech Labs (https://labs.mohammed-km.in/#orbits), Mohammed KM.',
+    'Generated client-side by Engineering, Energy & Space Lab (https://engineering.mohammed-km.in/#orbits), Mohammed KM.',
     '',
     '## 1. Orbital Mechanics Telemetry',
     `- **Regime:** ${orbit.regime}`,

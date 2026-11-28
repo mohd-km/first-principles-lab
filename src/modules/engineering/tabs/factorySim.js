@@ -1,11 +1,11 @@
 const INITIAL_STATIONS = [
   { id: 0, name: 'Stamp & Frame', essential: true, baseSec: 22, bloatReason: null },
   { id: 1, name: 'Dual Spec Audit', essential: false, baseSec: 38, bloatReason: 'Legacy committee sign-off' },
-  { id: 2, name: 'Fiberglass Mat', essential: false, baseSec: 44, bloatReason: 'NVH mat neither team owned' },
+  { id: 2, name: 'Fiberglass Mat', essential: false, baseSec: 44, bloatReason: 'Noise and vibration (NVH) mat neither team owned' },
   { id: 3, name: 'Weld & Seal', essential: true, baseSec: 24, bloatReason: null },
   { id: 4, name: 'Extra Bracket', essential: false, baseSec: 32, bloatReason: 'Redundant safety bracket' },
   { id: 5, name: 'Battery & Drive', essential: true, baseSec: 25, bloatReason: null },
-  { id: 6, name: 'Paper QA Log', essential: false, baseSec: 34, bloatReason: 'Manual clipboard check' },
+  { id: 6, name: 'Paper Quality Log', essential: false, baseSec: 34, bloatReason: 'Manual clipboard check' },
   { id: 7, name: 'Final Calibrate', essential: true, baseSec: 21, bloatReason: null }
 ];
 

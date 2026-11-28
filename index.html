@@ -3,121 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Engineering Lab — Mohammed KM</title>
-    <meta
-      name="description"
-      content="Interactive visual simulations of the Idiot Index, the 5-Step Manufacturing Algorithm, and Tsiolkovsky rocket reusability. Built by Mohammed KM."
-    />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=2" />
+    <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+    <title>Engineering, Energy &amp; Space Lab · Mohammed KM</title>
+    <meta name="description" content="Three first-principles simulators: what parts, factories and rockets should cost, how a power grid balances a day of demand and long-distance line losses, and orbits with satellite radio links." />
+    <meta name="author" content="Mohammed KM" />
+    <link rel="canonical" href="https://engineering.mohammed-km.in/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Engineering Lab — Mohammed KM" />
-    <meta
-      property="og:description"
-      content="Three playable engineering simulations: the Idiot Index BOM calculator, the 5-Step Factory Bottleneck Simulator, and Physics-Up Rocket Reusability."
-    />
-    <meta property="og:image" content="./og-card.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Engineering Lab — Mohammed KM" />
-    <meta
-      name="twitter:description"
-      content="Interactive simulations of the Idiot Index, 5-Step Factory Algorithm, and Physics-Up Rocket Reusability."
-    />
-    <meta name="twitter:image" content="./og-card.png" />
+    <meta property="og:url" content="https://engineering.mohammed-km.in/" />
+    <meta property="og:title" content="Engineering, Energy &amp; Space Lab · Mohammed KM" />
+    <meta property="og:description" content="Three first-principles simulators: what parts, factories and rockets should cost, how a power grid balances a day of demand and long-distance line losses, and orbits with satellite radio links." />
+    <meta name="twitter:card" content="summary" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/mkm-topbar.css" />
+    <script>(function(){var m={"quantum":"https://quantum.mohammed-km.in/#quantum","materials":"https://quantum.mohammed-km.in/#materials","neuro":"https://neuro.mohammed-km.in/#neuro","eeg":"https://neuro.mohammed-km.in/#eeg","molecules":"https://neuro.mohammed-km.in/#molecules"},h=location.hash.replace(/^#\/?/,'').toLowerCase();if(m[h])location.replace(m[h]);})();</script>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="header-top">
-          <p class="eyebrow">INTERACTIVE ENGINEERING NOTEBOOK</p>
-          <p class="byline">By <a href="https://mohammed-km.in" target="_blank" rel="noopener noreferrer">Mohammed KM</a></p>
-        </div>
-        <div class="brand-title-row">
-          <span class="brand-mark" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14" cy="14" r="10.5" stroke="#111111" stroke-width="1.35" />
-              <path d="M14 3.5V24.5" stroke="#111111" stroke-width="1.1" stroke-dasharray="2 2.5" />
-              <path d="M5.5 19.2L14 6.2L22.5 19.2H5.5Z" stroke="#111111" stroke-width="1.4" stroke-linejoin="round" />
-              <circle cx="14" cy="14.5" r="2.2" fill="#111111" />
-            </svg>
-          </span>
-          <h1>Engineering Lab</h1>
-        </div>
-        <p class="subtitle">
-          Reason from raw physics instead of precedent. Three live simulations inspired by Walter Isaacson's <em>Elon Musk</em>.
-        </p>
-
-        <nav class="tab-bar" role="tablist" aria-label="Engineering simulations">
-          <button
-            class="tab-btn is-active"
-            role="tab"
-            id="tab-idiot"
-            aria-selected="true"
-            aria-controls="panel-idiot"
-            data-tab="idiot"
-          >
-            <span class="tab-index">01</span>
-            <span class="tab-label">Idiot Index</span>
-          </button>
-          <button
-            class="tab-btn"
-            role="tab"
-            id="tab-factory"
-            aria-selected="false"
-            aria-controls="panel-factory"
-            data-tab="factory"
-          >
-            <span class="tab-index">02</span>
-            <span class="tab-label">5-Step Factory</span>
-          </button>
-          <button
-            class="tab-btn"
-            role="tab"
-            id="tab-rocket"
-            aria-selected="false"
-            aria-controls="panel-rocket"
-            data-tab="rocket"
-          >
-            <span class="tab-index">03</span>
-            <span class="tab-label">Physics-Up Orbit</span>
-          </button>
-        </nav>
-      </header>
-
-      <main class="main-content">
-        <section
-          id="panel-idiot"
-          class="tab-panel is-active"
-          role="tabpanel"
-          aria-labelledby="tab-idiot"
-        ></section>
-        <section
-          id="panel-factory"
-          class="tab-panel"
-          role="tabpanel"
-          aria-labelledby="tab-factory"
-          hidden
-        ></section>
-        <section
-          id="panel-rocket"
-          class="tab-panel"
-          role="tabpanel"
-          aria-labelledby="tab-rocket"
-          hidden
-        ></section>
-      </main>
-
-      <footer class="site-footer">
-        <p>Engineering Lab — 100% client-side physics and cost models. Zero external APIs.</p>
-      </footer>
-    </div>
-
-    <script type="module" src="/src/main.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

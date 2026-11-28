@@ -127,7 +127,7 @@ export function exportMarkdownReport(
   weather: WeatherCondition
 ): void {
   const md = [
-    '# Orbits & Link Budget — Snapshot',
+    '# Orbits & Link Budget: Snapshot',
     '',
     'Generated client-side by Engineering, Energy & Space Lab (https://engineering.mohammed-km.in/#orbits), Mohammed KM.',
     '',

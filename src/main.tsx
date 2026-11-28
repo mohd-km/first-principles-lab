@@ -11,7 +11,7 @@ const config: ShellConfig = {
   pillar: 'worldview & physics',
   title: "Engineering, Energy & Space Lab",
   subtitle:
-    "Three hands-on simulators built from basic physics: what a rocket and its parts should really cost, how a power grid keeps the lights on through a whole day, and how high, how fast and how far a satellite can talk. Move a slider and the maths reruns in your browser.",
+    "Three simulators built from basic physics: what a rocket and its parts should cost, how a power grid covers a full day of demand, and how high, how fast and how far a satellite can talk. Move a slider and the maths reruns in your browser.",
   footer: "Engineering, Energy & Space Lab · runs entirely in your browser · Mohammed KM",
   tabs: [
     {

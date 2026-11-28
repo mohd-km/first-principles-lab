@@ -1,7 +1,7 @@
 const INITIAL_STATIONS = [
   { id: 0, name: 'Stamp & Frame', essential: true, baseSec: 22, bloatReason: null },
   { id: 1, name: 'Dual Spec Audit', essential: false, baseSec: 38, bloatReason: 'Legacy committee sign-off' },
-  { id: 2, name: 'Fiberglass Mat', essential: false, baseSec: 44, bloatReason: 'Noise and vibration (NVH) mat neither team owned' },
+  { id: 2, name: 'Fibreglass Mat', essential: false, baseSec: 44, bloatReason: 'Noise and vibration (NVH) mat neither team owned' },
   { id: 3, name: 'Weld & Seal', essential: true, baseSec: 24, bloatReason: null },
   { id: 4, name: 'Extra Bracket', essential: false, baseSec: 32, bloatReason: 'Redundant safety bracket' },
   { id: 5, name: 'Battery & Drive', essential: true, baseSec: 25, bloatReason: null },
@@ -66,9 +66,9 @@ export function initFactorySim(container) {
       <div class="drawer-body">
         <p><strong>1. Question every requirement.</strong> Requirements must come from a named person, not a department. Even smart people leave stale specs behind.</p>
         <p><strong>2. Delete any part or process you can.</strong> If you do not end up adding at least 10% back in, you did not delete enough. Try deleting an essential station above to see the line break and restore it.</p>
-        <p><strong>3. Simplify and optimize.</strong> Never optimize a thing that should not exist.</p>
+        <p><strong>3. Simplify and optimise.</strong> Never optimise a thing that should not exist.</p>
         <p><strong>4. Accelerate cycle time.</strong> Go faster only after deleting and simplifying.</p>
-        <p><strong>5. Automate, last.</strong> During the Model 3 ramp, Tesla automated the fiberglass battery mat before realizing the mat was unnecessary, jamming the line and pushing up equipment spending (capex).</p>
+        <p><strong>5. Automate, last.</strong> During the Model 3 ramp, Tesla automated the fibreglass battery mat before it found the mat was not needed. The robots jammed the line and equipment spending (capex) went up.</p>
       </div>
     </details>
   `;
@@ -268,7 +268,7 @@ export function initFactorySim(container) {
       diagHtml = `
         <div class="diagnosis-box is-danger">
           <p class="diagnosis-tag">Line broken: add 10% back</p>
-          <p class="diagnosis-text">You deleted a step the car really needs (${names}). Tap the red chip above to add it back. Now you know the true minimum line.</p>
+          <p class="diagnosis-text">You deleted a step the car really needs (${names}). Tap the red chip above to add it back. The line cannot run without it.</p>
         </div>
       `;
     } else if (state.jammed) {
@@ -282,7 +282,7 @@ export function initFactorySim(container) {
       diagHtml = `
         <div class="diagnosis-box is-success">
           <p class="diagnosis-tag">First-Principles Flow Achieved (${m.gainRatio.toFixed(1)}x Throughput)</p>
-          <p class="diagnosis-text">Deleting unnecessary stations before automating cleared every queue, boosted output to ${Math.round(m.throughput)} cars/hr, and cut cost per car to $${Math.round(m.unitCost).toLocaleString('en-US')}.</p>
+          <p class="diagnosis-text">Deleting the unneeded stations before automating cleared every queue. Output rose to ${Math.round(m.throughput)} cars/hr and cost per car fell to $${Math.round(m.unitCost).toLocaleString('en-US')}.</p>
         </div>
       `;
     } else {

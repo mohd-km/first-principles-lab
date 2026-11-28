@@ -102,7 +102,7 @@ export const HvTransmissionLab: React.FC<Props> = ({
 - **True Firm Power LCOE:** $${gridSummary.firmLcoeUsdMWh.toFixed(2)}/MWh (Headline: $${gridSummary.headlineLcoeUsdMWh.toFixed(2)}/MWh + Firming Premium: $${gridSummary.firmingPremiumUsdMWh.toFixed(2)}/MWh)
 - **Curtailment:** ${gridSummary.curtailedGWh.toFixed(1)} GWh (${gridSummary.curtailmentPctOfVre.toFixed(1)}% of VRE) | **Unserved Load:** ${gridSummary.unservedGWh.toFixed(1)} GWh
 - **Zero-Carbon Share:** ${gridSummary.cleanSharePct.toFixed(1)}% | **Peak Evening Ramp:** ${gridSummary.peakEveningRampGWPerHr.toFixed(1)} GW/hr
-- **Min Synchronous Inertia:** H = ${gridSummary.minInertiaSec.toFixed(2)} s (Worst 5% trip RoCoF: ${gridSummary.worstRocofHzPerSec.toFixed(2)} Hz/s — ${gridSummary.inertiaStatus})
+- **Min Synchronous Inertia:** H = ${gridSummary.minInertiaSec.toFixed(2)} s (Worst 5% trip RoCoF: ${gridSummary.worstRocofHzPerSec.toFixed(2)} Hz/s, ${gridSummary.inertiaStatus})
 - **Estimated Land Footprint:** ~${Math.round(gridSummary.landFootprintKm2).toLocaleString()} km²`;
 
     return buildMarkdownReport(inputs, results, breakEvenKm, gridMd);
@@ -625,8 +625,8 @@ export const HvTransmissionLab: React.FC<Props> = ({
           <div>
             <h4>Wire heating (Joule's law): loss falls with voltage squared (1/V²)</h4>
             <p>
-              Three-phase AC transmission losses scale inversely with the square of line-to-line
-              voltage and power factor:
+              In three-phase AC, the loss falls with the square of the line-to-line
+              voltage and of the power factor:
             </p>
             <div className="eq-block">
               P_loss = 3 * I² * R = (P² * R) / (V² * cos²θ)   =&gt;   P_loss ∝ 1 / V²
@@ -650,7 +650,7 @@ export const HvTransmissionLab: React.FC<Props> = ({
             </div>
             <p>
               HVDC with classic converters (LCC, line-commutated converter, ±500 to ±800 kV) delivers 3,000–6,000 MW at 2.5%–3.5% loss per 1,000 km;
-              HVDC with newer transistor converters (VSC, voltage-source converter, ±320 to ±525 kV) enables subsea plastic-insulated (XLPE) links at 3.0%–3.5% per 1,000 km.
+              HVDC with newer transistor converters (VSC, voltage-source converter, ±320 to ±525 kV) makes subsea plastic-insulated (XLPE) links possible at 3.0%–3.5% per 1,000 km.
             </p>
           </div>
         </div>

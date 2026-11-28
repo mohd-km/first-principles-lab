@@ -2,7 +2,7 @@
 
 Live: https://engineering.mohammed-km.in/
 
-Three hands-on simulators built from basic physics: what a rocket and its parts should really cost, how a power grid keeps the lights on through a whole day, and how high, how fast and how far a satellite can talk. Move a slider and the maths reruns in your browser.
+Three simulators built from basic physics: what a rocket and its parts should cost, how a power grid covers a full day of demand, and how high, how fast and how far a satellite can talk. Move a slider and the maths reruns in your browser.
 
 Tabs (deep-linkable): `#engineering`, `#grid`, `#orbits`.
 

@@ -40,7 +40,7 @@ export const ReferenceDrawers: React.FC = () => {
               <div className="equation-title">Lasers between satellites vs fibre cables on the ground</div>
               <div className="equation-formula">c_vac = 299,792 km/s vs v_fiber = c / 1.468 = 204,218 km/s</div>
               <p className="equation-note">
-                Vacuum laser cross-links (1,550 nm, 100-200 Gbps) travel 32% faster than silica glass fiber, cutting London-Tokyo latency by ~25-35 ms.
+                Vacuum laser cross-links (1,550 nm, 100-200 Gbps) travel 32% faster than light in silica glass fibre, so London to Tokyo latency drops by about 25 to 35 ms.
               </p>
             </div>
           </div>

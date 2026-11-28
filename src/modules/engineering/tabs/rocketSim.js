@@ -272,7 +272,7 @@ export function initRocketSim(container) {
       </div>
       <div class="kpi-box">
         <span class="kpi-label">Vs old rockets</span>
-        <span class="kpi-value">${valid ? `${vsPrecedent.toFixed(0)}x` : '—'}</span>
+        <span class="kpi-value">${valid ? `${vsPrecedent.toFixed(0)}x` : 'n/a'}</span>
         <span class="kpi-sub">cheaper per kg</span>
       </div>
       <div class="kpi-box">
@@ -282,7 +282,7 @@ export function initRocketSim(container) {
       </div>
       <div class="kpi-box">
         <span class="kpi-label">Fuel share of cost</span>
-        <span class="kpi-value">${valid ? `${res.propSharePct.toFixed(1)}%` : '—'}</span>
+        <span class="kpi-value">${valid ? `${res.propSharePct.toFixed(1)}%` : 'n/a'}</span>
         <span class="kpi-sub">Fuel-only floor: ${formatUsdKg(res.propFloorPerKg)}</span>
       </div>
     `;
